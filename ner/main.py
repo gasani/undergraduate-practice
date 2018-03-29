@@ -2,19 +2,22 @@ import sys
 import argparse
 
 from taggers import stub
-#TODO from taggers import corenlp
+from taggers import corenlp
 #TODO from taggers import neuroner
-#TODO from taggers import spacy
+from taggers import spacy
+
+# Download from https://nlp.stanford.edu/software/CRF-NER.html#Download
+CORENLP_DIR = '../../stanford-ner-2018-02-27'
 
 def make_tagger(name):
     if name == 'stub':
         return stub.StubNer()
-    #elif name == 'corenlp':
-    #    #TODO
+    elif name == 'corenlp':
+        return corenlp.StanfordNer(corenlp_dir=CORENLP_DIR)
     #elif name == 'neuroner':
     #    #TODO
-    #elif name == 'spacy':
-    #    #TODO
+    elif name == 'spacy':
+        return spacy.SpacyNer()
     else:
         print('ERROR: Unrecognized tagger:', name)
         sys.exit(1)

@@ -3,7 +3,7 @@ import argparse
 
 from taggers import stub
 from taggers import corenlp
-#TODO from taggers import neuroner
+from taggers import nltkchunker
 from taggers import spacy
 
 # Download from https://nlp.stanford.edu/software/CRF-NER.html#Download
@@ -14,8 +14,8 @@ def make_tagger(name):
         return stub.StubNer()
     elif name == 'corenlp':
         return corenlp.StanfordNer(corenlp_dir=CORENLP_DIR)
-    #elif name == 'neuroner':
-    #    #TODO
+    elif name == 'nltkchunker':
+    	return nltkchunker.ChunkerNer()
     elif name == 'spacy':
         return spacy.SpacyNer()
     else:

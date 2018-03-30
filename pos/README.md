@@ -1,16 +1,10 @@
-# НИУ ВШЭ преддипломная практика
-
-# nmt
-Description
-
-
 # Russian POS Tagger
 POS tagging for Russian language for NetCracker Inc.
 
-#### Versions
+## Versions
 1. Based on MyStem
 2. Based on CrossMorphy
 
-#### Authors
+## Authors
 * Alexander Lyashuk
 * Ivan Romanov

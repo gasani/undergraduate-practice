@@ -1,5 +1,5 @@
 # Based on MyStem
-POS tagging for Russian language for NetCracker Inc. based on MyStem. DEMO is available [here]('http://159.65.201.37:7000/')
+POS tagging for Russian language for NetCracker Inc. based on MyStem. DEMO is available [here](http://159.65.201.37:7000/).
 
 ## Requirements
 

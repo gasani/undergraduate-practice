@@ -29,7 +29,10 @@ class ChunkerNer:
         tree = ne_chunk(pos_tag(word_tokenize(sentence)))
         # Traverse the tree
         tags = self.parseTree(tree)
+        words = sentence.split(' ')
+        while len(tags) < len(words):
+            tags.append("O")
         result = []
-        for word, tag in zip(sentence.split(' '), tags):
+        for word, tag in zip(words, tags):
             result.append((word, tag))
         return result
